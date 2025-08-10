@@ -64,10 +64,14 @@ const FoodDetails = () => {
                                     <button onClick={() => navigate(`/order/${_id}`)} className="w-full lg:w-auto bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-xl text-lg shadow-md transition duration-300">
                                         Purchase Now
                                     </button>
+
                                 )
                             }
 
                         </div>
+
+                        
+
                     </div>
 
                 </div>

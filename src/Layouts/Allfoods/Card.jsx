@@ -17,7 +17,13 @@ const Card = ({ data }) => {
                 <h2 className="card-title">{foodName}</h2>
                 <p>{description}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={()=>navigate(`/details/${_id}`)} className="btn btn-primary">View Details</button>
+
+
+
+                    <button onClick={() => navigate(`/details/${_id}`)} className="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg border-blue-600 border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px] font-bold
+active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+                        View Details
+                    </button>
                 </div>
             </div>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, NavLink, useNavigate } from 'react-router';
 import AuthInfo from '../hooks/AuthInfo';
 import Theme from './Theme';
+import { FaClipboardList, FaPlusCircle, FaUtensils } from 'react-icons/fa';
 
 
 const Nav = () => {
@@ -35,7 +36,7 @@ const Nav = () => {
             })
 
     }
-    
+
 
     return (
         <div className="navbar bg-base-100 shadow-sm ">
@@ -54,7 +55,7 @@ const Nav = () => {
 
                     </ul>
                 </div>
-                
+
                 <img onClick={() => navigate('/')} src="https://cdn.qwenlm.ai/output/24058570-a08d-412a-b885-c2c9cef0d4a7/t2i/37ad233b-728f-4543-91c0-7efcfc50c57e/3f9bd5fa-2a6e-4c57-a98a-390f8fd5ba09.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMjQwNTg1NzAtYTA4ZC00MTJhLWI4ODUtYzJjOWNlZjBkNGE3IiwicmVzb3VyY2VfaWQiOiIzZjliZDVmYS0yYTZlLTRjNTctYTk4YS0zOTBmOGZkNWJhMDkiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.NeXmshRyczwJzFAFKNYJzwjyhJftQ6bpadBmNVsW6XY" className='w-[50px] h-[50px] rounded-2xl ' alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -74,7 +75,7 @@ const Nav = () => {
 
                 <div className="dropdown dropdown-end">
                     <div tabIndex={0} role="button" className={!user ? '"btn  btn-ghost btn-circle avatar cursor-pointer" hidden' : '"btn  btn-ghost btn-circle avatar cursor-pointer"'}>
-                        
+
                         <div className="w-10 rounded-full cursor-pointer">
                             {user && (
                                 user.emailVerified ? (
@@ -91,11 +92,22 @@ const Nav = () => {
                     {
                         user && <ul
                             tabIndex={0}
-                            className="menu space-y-1 font-semibold menu-sm dropdown-content mt-3 z-[1] w-52 p-2 shadow bg-base-100 rounded-box"
+                            className="menu space-y-3 font-semibold menu-sm dropdown-content mt-3 z-[1] w-52 p-2 shadow bg-base-100 rounded-box"
                         >
-                            <NavLink to='myfoods'>My foods</NavLink>
-                            <NavLink to='addfood'>Add food</NavLink>
-                            <NavLink to='myorders'>My orders</NavLink>
+                            <NavLink to="myfoods" className="flex items-center gap-2">
+                                <FaUtensils className="text-lg" />
+                                My Foods
+                            </NavLink>
+
+                            <NavLink to="addfood" className="flex items-center gap-2">
+                                <FaPlusCircle className="text-lg" />
+                                Add Food
+                            </NavLink>
+
+                            <NavLink to="myorders" className="flex items-center gap-2">
+                                <FaClipboardList className="text-lg" />
+                                My Orders
+                            </NavLink>
                         </ul>
                     }
                 </div>

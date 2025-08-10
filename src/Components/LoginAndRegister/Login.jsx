@@ -36,9 +36,9 @@ const Login = () => {
             })
     }
     return (
-        <div className="flex items-center justify-center min-h-screen px-4">
+        <div className="flex items-center justify-center min-h-screen px-4  ">
             <title>Login</title>
-            <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6 space-y-6">
+            <div className="w-full max-w-md bg-gray-50 rounded-lg shadow-lg p-6 space-y-6">
 
                 <div className="text-center">
                     <h2 className="text-2xl font-bold text-gray-800">Welcome Back!</h2>
@@ -46,7 +46,7 @@ const Login = () => {
                 </div>
 
 
-                <form className="space-y-4" onSubmit={handleLogin}>
+                <form className="space-y-4 text-black  " onSubmit={handleLogin}>
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>

@@ -51,9 +51,9 @@ const Register = () => {
             })
     }
     return (
-        <div className="bg-gray-100 flex items-center justify-center min-h-screen px-4">
+        <div className=" flex items-center justify-center min-h-screen px-4">
             <title>Register</title>
-            <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6 space-y-6">
+            <div className="w-full max-w-md bg-gray-100 rounded-lg shadow-lg p-6 space-y-6">
 
                 <div className="text-center">
                     <h2 className="text-2xl font-bold text-gray-800">Create an Account</h2>
@@ -61,7 +61,7 @@ const Register = () => {
                 </div>
 
 
-                <form className="space-y-4" onSubmit={handleRegister}>
+                <form className="space-y-4 text-black " onSubmit={handleRegister}>
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>

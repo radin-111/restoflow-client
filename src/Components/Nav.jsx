@@ -47,11 +47,30 @@ const Nav = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu space-y-2 menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        className="menu space-y-4 menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                         <NavLink to='/'>Home</NavLink>
                         <NavLink to='/allfoods'>All Foods
                         </NavLink>
                         <NavLink to='/gallery'>Gallery</NavLink>
+                        {
+
+                            user && <>
+                                <NavLink to="myfoods" >
+
+                                    My Foods
+                                </NavLink>
+
+                                <NavLink to="addfood">
+
+                                    Add Food
+                                </NavLink>
+
+                                <NavLink to="myorders" >
+
+                                    My Orders
+                                </NavLink>
+                            </>
+                        }
 
                     </ul>
                 </div>
@@ -64,6 +83,28 @@ const Nav = () => {
                     <NavLink to='/allfoods'>All Foods
                     </NavLink>
                     <NavLink to='/gallery'>Gallery</NavLink>
+
+                    {
+
+                        user && <>
+                            <NavLink to="myfoods" >
+
+                                My Foods
+                            </NavLink>
+
+                            <NavLink to="addfood">
+
+                                Add Food
+                            </NavLink>
+
+                            <NavLink to="myorders" >
+
+                                My Orders
+                            </NavLink>
+                        </>
+                    }
+
+
 
                 </ul>
             </div>

@@ -20,6 +20,7 @@ import Order from "../Layouts/Order/Order";
 import MyOrder from "../Layouts/Order/MyOrder";
 import Gallery from "../Layouts/Gallery/Gallery";
 import Loading from "../Components/Loading";
+import PasswordReset from "../Layouts/PasswordReset/PasswordReset";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () => fetch("https://restaurant-management-server-bay.vercel.app/foods"),
         hydrateFallbackElement: <Loading></Loading>
+      },
+      {
+        path: 'password_reset',
+        element: <PasswordReset></PasswordReset>
       },
       {
         path: 'login',

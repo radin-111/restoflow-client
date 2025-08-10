@@ -69,6 +69,10 @@ const Login = () => {
                         />
                     </div>
 
+                    <div>
+                        <Link to='/password_reset' className='text-sky-400 font-semibold underline'>Forgotten password</Link>
+                    </div>
+
 
                     <button
                         type="submit"

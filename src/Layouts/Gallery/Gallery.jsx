@@ -43,9 +43,9 @@ const Gallery = () => {
 
     return (
         <div>
-            <div  style={{ backgroundImage: `url(${bg_image})`  }} className='min-h-screen bg-no-repeat bg-gray-100 py-12 px-4 sm:px-6 lg:px-8  bg-center '>
+            <div  style={{ backgroundImage: `url(${bg_image})`  }} className='min-h-screen bg-no-repeat  py-12 px-4 sm:px-6 lg:px-8  bg-center '>
                 
-                <h1 className="text-3xl font-bold text-center text-gray-800 mb-10">Food Gallery</h1>
+                <h1 className="text-3xl font-bold text-center mb-10">Food Gallery</h1>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {slides.map((d, index) => (

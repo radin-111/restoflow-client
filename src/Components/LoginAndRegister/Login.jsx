@@ -36,7 +36,7 @@ const Login = () => {
             })
     }
     return (
-        <div className="bg-gray-100 flex items-center justify-center min-h-screen px-4">
+        <div className="flex items-center justify-center min-h-screen px-4">
             <title>Login</title>
             <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-6 space-y-6">
 

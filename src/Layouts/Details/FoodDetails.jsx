@@ -11,7 +11,9 @@ const FoodDetails = () => {
 
     return (
         <div>
-            <div className="bg-gradient-to-br from-orange-100 via-white to-yellow-100 min-h-screen flex items-center justify-center p-6 md:p-10 lg:p-16 ">
+            <div className="bg-gradient-to-br from-orange-100 via-white to-yellow-100 
+            
+            min-h-screen flex items-center justify-center p-6 md:p-10 lg:p-16 ">
                 <div className="max-w-7xl w-full bg-white/90 backdrop-blur-md shadow-2xl rounded-3xl overflow-hidden flex flex-col lg:flex-row transition-all duration-300">
 
                     <div className="lg:w-1/2 w-full h-64 sm:h-96 lg:h-auto aspect-video overflow-hidden flex items-center justify-center bg-gray-100">

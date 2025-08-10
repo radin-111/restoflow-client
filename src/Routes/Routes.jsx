@@ -19,6 +19,7 @@ import FoodDetails from "../Layouts/Details/FoodDetails";
 import Order from "../Layouts/Order/Order";
 import MyOrder from "../Layouts/Order/MyOrder";
 import Gallery from "../Layouts/Gallery/Gallery";
+import Loading from "../Components/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
         index: true,
         element: <Home></Home>,
         loader: () => fetch("https://restaurant-management-server-bay.vercel.app/foods"),
-        hydrateFallbackElement: <span className="loading loading-spinner text-error"></span>
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: 'login',
@@ -49,13 +50,13 @@ export const router = createBrowserRouter([
         path: 'myfoods',
         element: <Private><Myfoods></Myfoods></Private>,
         loader: () => fetch("https://restaurant-management-server-bay.vercel.app/foods"),
-        hydrateFallbackElement: <span className="loading loading-spinner text-error"></span>
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: 'update/:id',
         element: <Private><UpdateFood></UpdateFood></Private>,
         loader: ({ params }) => fetch(`https://restaurant-management-server-bay.vercel.app/foods/${params.id}`),
-        hydrateFallbackElement: <span className="loading loading-spinner text-error"></span>
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: 'notallowed',
@@ -65,26 +66,26 @@ export const router = createBrowserRouter([
         path: "allfoods",
         element: <Allfoods></Allfoods>,
         loader: () => fetch("https://restaurant-management-server-bay.vercel.app/foods"),
-        hydrateFallbackElement: <span className="loading loading-spinner text-error"></span>
+        hydrateFallbackElement: <Loading></Loading>
 
       },
       {
         path: 'details/:id',
         element: <FoodDetails></FoodDetails>,
         loader: ({ params }) => fetch(`https://restaurant-management-server-bay.vercel.app/foods/${params.id}`),
-        hydrateFallbackElement: <span className="loading loading-spinner text-error"></span>
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: 'order/:id',
         element: <Private><Order></Order></Private>,
         loader: ({ params }) => fetch(`https://restaurant-management-server-bay.vercel.app/foods/${params.id}`),
-        hydrateFallbackElement: <span className="loading loading-spinner text-error"></span>
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path: 'myorders',
         element: <Private><MyOrder></MyOrder></Private>,
         loader: () => fetch('https://restaurant-management-server-bay.vercel.app/orders'),
-        hydrateFallbackElement: <span className="loading loading-spinner text-error"></span>
+        hydrateFallbackElement: <Loading></Loading>
 
       },
       {

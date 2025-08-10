@@ -5,10 +5,12 @@ import Nav from './Nav';
 
 const Root = () => {
     return (
-        <div>
+        <div className='bg-base-100'>
             <Nav></Nav>
-            <Outlet></Outlet>
-            
+            <div >
+                <Outlet></Outlet>
+            </div>
+
         </div>
     );
 };

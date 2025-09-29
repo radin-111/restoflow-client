@@ -46,8 +46,7 @@ const Myfoods = () => {
               });
             }
           })
-          .catch((err) => {
-            console.error(err);
+          .catch(() => {
             Swal.fire({
               title: "Error!",
               text: "Something went wrong while deleting.",
